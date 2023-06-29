@@ -17,28 +17,28 @@ import java.util.Map;
 public class Main {
 
 	//定数化されたメッセージ
-	public static final String NUMBER_OF_PEOPLE_MESSAGE = "社員の人数を入力して下さい。(整数)";
-	public static final String NAME_OF_PERSON_MESSAGE = "社員の名前をスペース区切りで入力して下さい。（半角英小文字）";
-	public static final String NUMBER_OF_BOOK_MESSAGE = "購入した本の数を入力して下さい。(整数)";
-	public static final String NAME_AND_BOOK_MESSAGE = "回分の社員の名前と本の金額をスペース区切りで入力して下さい。（例：ヒューマン 1500）";
-	public static final String INPUT_ERROR_MESSAGE = "正しく入力して下さい。";
-	public static final String AMOUNT_OF_MONEY_ERROR_MESSAGE = "金額を正しく入力して下さい。";
-	public static final String NAME_OF_PERSON_ERROR_MESSAGE = "入力された社員と登録された社員が一致しません。";
-	public static final String NUMBER_OF_PEOPLE_ERROR_MESSAGE = "入力された名前の数と社員の人数が一致しません。";
-	public static final String BOOK_MESSAGE = "冊目";
-	public static final String RESULT_MESSAGE = "結果";
-	public static final char CHAR_SPACE_MESSAGE = ' ';
-	public static final String SPACE_MESSAGE = " "; 
-	public static final String SPACE_CHARACTER_MESSAGE = "";
-	public static final String INTEGER_CHECK = "[+-]?\\d*(\\.\\d+)?";
+	private static final String NUMBER_OF_PEOPLE_MESSAGE = "社員の人数を入力して下さい。(整数)";
+	private static final String NAME_OF_PERSON_MESSAGE = "社員の名前をスペース区切りで入力して下さい。（半角英小文字）";
+	private static final String NUMBER_OF_BOOK_MESSAGE = "購入した本の数を入力して下さい。(整数)";
+	private static final String NAME_AND_BOOK_MESSAGE = "回分の社員の名前と本の金額をスペース区切りで入力して下さい。（例：ヒューマン 1500）";
+	private static final String INPUT_ERROR_MESSAGE = "正しく入力して下さい。";
+	private static final String AMOUNT_OF_MONEY_ERROR_MESSAGE = "金額を正しく入力して下さい。";
+	private static final String NAME_OF_PERSON_ERROR_MESSAGE = "入力された社員と登録された社員が一致しません。";
+	private static final String NUMBER_OF_PEOPLE_ERROR_MESSAGE = "入力された名前の数と社員の人数が一致しません。";
+	private static final String BOOK_MESSAGE = "冊目";
+	private static final String RESULT_MESSAGE = "結果";
+	private static final char CHAR_SPACE_MESSAGE = ' ';
+	private static final String SPACE_MESSAGE = " "; 
+	private static final String SPACE_CHARACTER_MESSAGE = "";
+	private static final String INTEGER_CHECK = "[+-]?\\d*(\\.\\d+)?";
 
 	//社員人数の格納用
-	static int menberCount = 0;
+	private static int menberCount = 0;
 	//書籍数の格納用
-	static int bookCount = 0;
+	private static int bookCount = 0;
 	//各自の名前と購入金額の合計格納用
-	static Map<String, Integer> result = new HashMap<>();
-
+	private static Map<String, Integer> result = new HashMap<>();
+	
 	/**
 	 * 説明：入力された情報から書籍購入費の高い順に表示
 	 * 補足：不適切な入力が行われた場合は再入力する用の入力チェック実施
@@ -148,7 +148,7 @@ public class Main {
 	 * @param flg　入力チェックの種類選択用
 	 * @return　エラーメッセージ
 	 */
-	public static String inputCheck(String str, int flg){
+	private static String inputCheck(String str, int flg){
 
 		String[] menberAndPrice = null;
 
@@ -184,7 +184,7 @@ public class Main {
 	 * @param target　検索対象（スペース）
 	 * @return　カウント数
 	 */
-	public static int spaceCount(String str, char target){
+	private static int spaceCount(String str, char target){
 
 		int count = 0;
 
@@ -201,7 +201,7 @@ public class Main {
 	 * @param result　並び替え前のMap 
 	 * @return　並び替え後の
 	 */
-	public static Map<String, Integer> sortMap(Map<String, Integer> result){
+	private static Map<String, Integer> sortMap(Map<String, Integer> result){
 
 		List<Integer> list = new ArrayList<>(result.values());
 		List<String> list2 = new ArrayList<>();
