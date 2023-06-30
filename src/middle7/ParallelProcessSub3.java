@@ -20,6 +20,6 @@ public class ParallelProcessSub3 implements ProcessSub{
     @Override
     public String call() throws Exception {
         // TODO 自動生成されたメソッド・スタブ
-        return null;
+        return process();
     }
 }
